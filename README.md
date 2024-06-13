@@ -11,13 +11,8 @@
 2. [Objetivos del Proyecto](#sec_2)
 3. [Dataset/ Diccionario de datos](#sec_3)
 4. [Análisis Exploratorio de Datos (EDA)](#sec_4)
-5. [Insigths](#sec_5)
-6. [Preprocesamiento](#sec_6)
-7. [Modelos de Machine Learning](#sec_7)
-8. [Evaluación de Modelos](#sec_8)
-9. [Resultados y Conclusiones](#sec_9)
-10. [Presentación](#sec_10)
-11. [Disclaimer](#sec_11)
+5. [Modelo](#sec_5)
+6. [Conclusiones](#sec_6)
 
 
 <a id='sec_1'></a>
@@ -76,23 +71,17 @@ Desarrollar un modelo de Machine Learning robusto que pueda predecir si un nuevo
 | Status                         | int64        | 2              | [1, 0]                                      | Estado del préstamo (1 = incumplimiento/default, 0 = sin incumplimiento/no default).                             |
 | dtir1                          | float64      | 57             | [45.0, 46.0, 42.0, 39.0, 40.0]              | Porcentaje deuda-ingreso.                                                     |
 
-
+<a id='sec_4'></a>
 ## EDA
 <a id="eda"></a>
-### EDA
-Aquí va el contenido del EDA...
-[Regresar al índice](#índice)
 
+<a id='sec_5'></a>
 ## Modelo
 <a id="modelo"></a>
-### Modelo
-Aquí va el contenido del modelo...
-[Regresar al índice](#índice)
 
+<a id='sec_6'></a>
 ## Conclusiones
 <a id="conclusiones"></a>
-### Conclusiones
-Aquí van las conclusiones...
-[Regresar al índice](#índice)
+
 
 
