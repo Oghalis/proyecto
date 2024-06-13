@@ -1,14 +1,40 @@
-![Bank Loan Default Prediction](https://via.placeholder.com/840x100/4a90e2/ffffff?text=BANK+LOAN+DEFAULT+PREDICTION)
+![Mortgage Loan Default Prediction](https://via.placeholder.com/840x100/4a90e2/ffffff?text=MORTGAGE+LOAN+DEFAULT+PREDICTION)
+---
 ![loan_default_2](https://github.com/Oghalis/proyecto/assets/148403071/a6f2f3b7-8687-4a81-8dd9-f5490485b4d0)
 
 
 * Este repositorio forma parte de uno de los proyectos presentados durante el curso de Análisis de Datos impartido por Coding Dojo.
 
-## Introducción
-<a id="introducción"></a>
-### Introducción
-Aquí va el contenido de la introducción...
-[Regresar al índice](#índice)
+# :clipboard: Tabla de contenidos
+1. [Resumen del Proyecto](#sec_1)
+2. [Objetivos del Proyecto](#sec_2)
+3. [Dataset/ Diccionario de datos](#sec_3)
+4. [Análisis Exploratorio de Datos (EDA)](#sec_4)
+5. [Análisis Explicativo de Datos](#sec_5)
+6. [Preprocesamiento](#sec_6)
+7. [Modelos de Machine Learning](#sec_7)
+8. [Evaluación de Modelos](#sec_8)
+9. [Resultados y Conclusiones](#sec_9)
+10. [Presentación](#sec_10)
+11. [Disclaimer](#sec_11)
+
+
+<a id='sec_1'></a>
+# :bookmark_tabs: Resumen del Proyecto
+El término "loan default" se refiere a cuando un prestatario no cumple con las condiciones de un préstamo, como los pagos de intereses o principal, debido a dificultades financieras, pérdida de empleo u otros problemas económicos. Los bancos, que generan ingresos significativos a través de préstamos hipotecarios, enfrentan el riesgo de incumplimiento por parte de los prestatarios. Los métodos tradicionales de evaluación de riesgo no siempre son precisos, por lo que este proyecto se enfoca en resolver dicho problema, utilizando técnicas avanzadas de Machine Learning para proporcionar una predicción más precisa y ayudar a los bancos a mitigar el riesgo de incumplimientos de préstamos hipotecarios.
+
+<a id='sec_2'></a>
+# :dart: Objetivos del Proyecto
+## Objetivo Principal
+Desarrollar un modelo de Machine Learning robusto que pueda predecir si un nuevo prestatario es probable que incumpla con un préstamo hipotecario o no, utilizando datos históricos sobre prestatarios y diversas características determinísticas.
+## Objetivos Secundarios
+1. Identificar los insights más importantes sobre la influencia de los atributos del cliente en el riesgo de incumplimiento.
+2. Proporcionar a los bancos una comprensión detallada de los factores que impulsan el riesgo de incumplimiento y sugerir estrategias para contrarrestarlo.
+3. Documentar el proceso de desarrollo del modelo y compartir el código en un repositorio público en GitHub para su revisión, colaboración y uso como referencia para futuras investigaciones y análisis relacionados con el proyecto.
+
+<a id='sec_3'></a>
+# :floppy_disk: Dataset / Diccionario de datos
+
 
 
 
@@ -22,16 +48,16 @@ Aquí va el contenido de la introducción...
 | loan_type                      | object       | 3              | [type1, type2, type3]                       | Tipo de préstamo.                                                           |
 | loan_purpose                   | object       | 4              | [p1, p4, p3, p2]                            | Propósito del préstamo.                                                     |
 | Credit_Worthiness              | object       | 2              | [l1, l2]                                    | Valoración crediticia del prestatario.                                      |
-| open_credit                    | object       | 2              | [nopc, opc]                                 | Disponibilidad de crédito abierto (nopc = no, opc = sí).                    |
+| open_credit                    | object       | 2              | [nopc, opc]                                 | Disponibilidad de crédito abierto (nopc = no open credit/no, opc = open credit/sí).                    |
 | business_or_commercial         | object       | 2              | [nob/c, b/c]                                | Indica si el préstamo es para negocios o comercial (nob/c = no, b/c = sí).  |
 | loan_amount                    | int64        | 211            | [116500, 206500, 406500, 456500, 696500]    | Monto total del préstamo otorgado.                                          |
 | rate_of_interest               | float64      | 131            | [4.56, 4.25, 4.0, 3.99, 4.5]                | Tasa de interés aplicada al préstamo (%).                                   |
-| Interest_rate_spread           | float64      | 22516          | [0.2, 0.681, 0.3042, 0.1523, 0.9998]        | Diferencial de la tasa de interés.                                          |
-| Upfront_charges                | float64      | 58271          | [595.0, 0.0, 370.0, 5120.0, 5609.88]        | Cargos iniciales.                                                           |
+| Interest_rate_spread           | float64      | 22516          | [0.2, 0.681, 0.3042, 0.1523, 0.9998]        | Diferencia entre la tasa de interés específica del préstamo y la tasa de referencia.                                          |
+| Upfront_charges                | float64      | 58271          | [595.0, 0.0, 370.0, 5120.0, 5609.88]        | Cargos iniciales pagados al inicio del préstamo.                                                           |
 | term                           | float64      | 26             | [360.0, 300.0, 180.0, 312.0, 144.0]         | Duración del préstamo en meses.                                             |
 | Neg_ammortization              | object       | 2              | [not_neg, neg_amm]                          | Amortización negativa (not_neg = no, neg_amm = sí).                         |
-| interest_only                  | object       | 2              | [not_int, int_only]                         | Indica si es solo intereses (not_int = no, int_only = sí).                  |
-| lump_sum_payment               | object       | 2              | [not_lpsm, lpsm]                            | Indica si es un pago único (not_lpsm = no, lpsm = sí).                      |
+| interest_only                  | object       | 2              | [not_int, int_only]                         | Indica si el préstamo es solo intereses durante un período específico (not_int = no, int_only = sí).                  |
+| lump_sum_payment               | object       | 2              | [not_lpsm, lpsm]                            | Indica si el préstamo incluye un pago único grande al final del término (not_lpsm = no, lpsm = sí).                      |
 | property_value                 | float64      | 385            | [118000.0, 508000.0, 658000.0, 758000.0, 10080.0] | Valor de la propiedad.                                                 |
 | construction_type              | object       | 2              | [sb, mh]                                    | Tipo de construcción (sb = sitio construido, mh = casa móvil).              |
 | occupancy_type                 | object       | 3              | [pr, sr, ir]                                | Tipo de ocupación (pr = propietario, sr = arrendatario, ir = inversionista).|
