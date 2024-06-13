@@ -73,10 +73,8 @@ Desarrollar un modelo de Machine Learning robusto que pueda predecir si un nuevo
 | LTV                            | float64      | 8484           | [98.72881356, 80.01968504, 69.3768997, 91.8865, 88.13] | Relación préstamo-valor.                                             |
 | Region                         | object       | 4              | [south, North, central, North-East]         | Región geográfica.                                                          |
 | Security_Type                  | object       | 2              | [direct, Indriect]                          | Tipo de seguro (direct = directo/garantía es la misma propiedad, Indriect = indirecto/garantía es otra propiedad o bien).                 |
-| Status                         | int64        | 2              | [1, 0]                                      | Estado del préstamo (1 = activo, 0 = inactivo).                             |
+| Status                         | int64        | 2              | [1, 0]                                      | Estado del préstamo (1 = incumplimiento/default, 0 = sin incumplimiento/no default).                             |
 | dtir1                          | float64      | 57             | [45.0, 46.0, 42.0, 39.0, 40.0]              | Porcentaje deuda-ingreso.                                                     |
-
-
 
 
 ## EDA
