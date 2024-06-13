@@ -1,6 +1,9 @@
-![LOAN DEFAULT DATASET](https://via.placeholder.com/800x100/4a90e2/ffffff?text=LOAN+DEFAULT+DATASET)
----
+![Bank Loan Default Prediction](https://via.placeholder.com/840x100/4a90e2/ffffff?text=BANK+LOAN+DEFAULT+PREDICTION)
+![loan_default_2](https://github.com/Oghalis/proyecto/assets/148403071/a6f2f3b7-8687-4a81-8dd9-f5490485b4d0)
+
+
 * Este repositorio forma parte de uno de los proyectos presentados durante el curso de Análisis de Datos impartido por Coding Dojo.
+
 ## Introducción
 <a id="introducción"></a>
 ### Introducción
