@@ -11,7 +11,7 @@
 2. [Objetivos del Proyecto](#sec_2)
 3. [Dataset/ Diccionario de datos](#sec_3)
 4. [Análisis Exploratorio de Datos (EDA)](#sec_4)
-5. [Análisis Explicativo de Datos](#sec_5)
+5. [Insigths](#sec_5)
 6. [Preprocesamiento](#sec_6)
 7. [Modelos de Machine Learning](#sec_7)
 8. [Evaluación de Modelos](#sec_8)
