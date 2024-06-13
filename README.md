@@ -1,5 +1,6 @@
+
 ![Mortgage Loan Default Prediction](https://via.placeholder.com/840x100/4a90e2/ffffff?text=MORTGAGE+LOAN+DEFAULT+PREDICTION)
----
+
 ![loan_default_2](https://github.com/Oghalis/proyecto/assets/148403071/a6f2f3b7-8687-4a81-8dd9-f5490485b4d0)
 
 
@@ -59,21 +60,21 @@ Desarrollar un modelo de Machine Learning robusto que pueda predecir si un nuevo
 | interest_only                  | object       | 2              | [not_int, int_only]                         | Indica si el préstamo es solo intereses durante un período específico (not_int = no, int_only = sí).                  |
 | lump_sum_payment               | object       | 2              | [not_lpsm, lpsm]                            | Indica si el préstamo incluye un pago único grande al final del término (not_lpsm = no, lpsm = sí).                      |
 | property_value                 | float64      | 385            | [118000.0, 508000.0, 658000.0, 758000.0, 10080.0] | Valor de la propiedad.                                                 |
-| construction_type              | object       | 2              | [sb, mh]                                    | Tipo de construcción (sb = sitio construido, mh = casa móvil).              |
-| occupancy_type                 | object       | 3              | [pr, sr, ir]                                | Tipo de ocupación (pr = propietario, sr = arrendatario, ir = inversionista).|
+| construction_type              | object       | 2              | [sb, mh]                                    | Tipo de construcción (sb = site built/sitio construido, mh = Manufactured home/casa móvil).              |
+| occupancy_type                 | object       | 3              | [pr, sr, ir]                                | Tipo de ocupación (pr = primary residence/propietario, sr = second residence/arrendatario, ir = investment residence/inversionista).|
 | Secured_by                     | object       | 2              | [home, land]                                | Garantizado por (home = hogar, land = tierra).                              |
-| total_units                    | object       | 4              | [1U, 2U, 3U, 4U]                            | Número total de unidades.                                                   |
+| total_units                    | object       | 4              | [1U, 2U, 3U, 4U]                            | Número total de unidades (1U = flat, 2U = duplex, 3U = triplex, 4U= cuadruplex).                                                   |
 | income                         | float64      | 1001           | [1740.0, 4980.0, 9480.0, 11880.0, 10440.0]  | Ingresos del prestatario.                                                   |
-| credit_type                    | object       | 4              | [EXP, EQUI, CRIF, CIB]                      | Tipo de crédito.                                                            |
+| credit_type                    | object       | 4              | [EXP, EQUI, CRIF, CIB]                      | Tipo de crédito (EXP = Experian, EQUI = Equifax, CRIF = CRIF, CIB = Credit Information Bureau).                                                            |
 | Credit_Score                   | int64        | 401            | [758, 552, 834, 587, 602]                   | Puntuación crediticia del prestatario.                                      |
-| co-applicant_credit_type       | object       | 2              | [CIB, EXP]                                  | Tipo de crédito del co-solicitante.                                         |
+| co-applicant_credit_type       | object       | 2              | [CIB, EXP]                                  | Tipo de crédito del co-solicitante (CIB = Credit Information Bureau, EXP = Experian).                                         |
 | age                            | object       | 7              | [25-34, 55-64, 35-44, 45-54, 65-74]         | Rango de edad del prestatario.                                              |
-| submission_of_application      | object       | 2              | [to_inst, not_inst]                         | Presentación de la solicitud (to_inst = a la institución, not_inst = no a la institución). |
+| submission_of_application      | object       | 2              | [to_inst, not_inst]                         | Presentación de la solicitud (to_inst = a la institución, not_inst = no a la institución/ realizado a través de brokers o intermediarios). |
 | LTV                            | float64      | 8484           | [98.72881356, 80.01968504, 69.3768997, 91.8865, 88.13] | Relación préstamo-valor.                                             |
 | Region                         | object       | 4              | [south, North, central, North-East]         | Región geográfica.                                                          |
-| Security_Type                  | object       | 2              | [direct, Indriect]                          | Tipo de seguridad (direct = directo, Indriect = indirecto).                 |
+| Security_Type                  | object       | 2              | [direct, Indriect]                          | Tipo de seguro (direct = directo/garantía es la misma propiedad, Indriect = indirecto/garantía es otra propiedad o bien).                 |
 | Status                         | int64        | 2              | [1, 0]                                      | Estado del préstamo (1 = activo, 0 = inactivo).                             |
-| dtir1                          | float64      | 57             | [45.0, 46.0, 42.0, 39.0, 40.0]              | Relación deuda-ingreso.                                                     |
+| dtir1                          | float64      | 57             | [45.0, 46.0, 42.0, 39.0, 40.0]              | Porcentaje deuda-ingreso.                                                     |
 
 
 
